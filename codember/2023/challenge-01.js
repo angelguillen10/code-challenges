@@ -30,11 +30,10 @@ const countWords = (text) => {
     };
   }, {});
 
-  const textResult = Object.entries(result).reduce((acc, [word, count]) => {
-    return `${acc}${word}${count}`;
-  }, '');
-
-  return textResult;
+  return Object.entries(result).reduce(
+    (acc, [word, count]) => `${acc}${word}${count}`,
+    ''
+  );
 };
 
 const text =
